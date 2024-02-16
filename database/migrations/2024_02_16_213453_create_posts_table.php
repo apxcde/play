@@ -10,7 +10,8 @@ return new class extends Migration {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('content');
+            $table->text('excerpt');
+            $table->longText('content');
             $table->string('slug')->unique();
             $table->foreignId('user_id')->constrained();
             $table->timestamp('published_at')->nullable();

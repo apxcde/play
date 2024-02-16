@@ -12,10 +12,12 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Cera Pro', ...defaultTheme.fontFamily.serif],
+                sans: [
+                    'Cera Pro',
+                    ...defaultTheme.fontFamily.serif
+                ],
             },
             colors: {
-                neutral: {},
                 blue: {
                     500: '#0747A6',
                     400: '#0052CC', // Pacific Bridge (Primary Color)
