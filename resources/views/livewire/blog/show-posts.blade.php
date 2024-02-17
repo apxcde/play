@@ -62,7 +62,7 @@ new class extends Component {
 
     @if($this->posts->count() >= $on_page)
         <div x-intersect.full="$wire.loadMore()" class="p-4">
-            <div wire:loading wire:target="loadMore" class="bg-white dark:bg-gray-900 rounded w-full shadow-sm flex items-center justify-center">
+            <div wire:loading wire:target="loadMore" class="bg-white dark:bg-gray-900 rounded w-full flex items-center justify-center">
                 <div class="text-gray-600 dark:text-gray-400">
                     Loading more conversations...
                 </div>
