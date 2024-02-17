@@ -12,10 +12,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: [
-                    'Cera Pro',
-                    ...defaultTheme.fontFamily.serif
-                ],
+                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 blue: {

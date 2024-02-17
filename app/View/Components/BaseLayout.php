@@ -9,8 +9,8 @@ use Illuminate\View\View;
 class BaseLayout extends Component
 {
     public function __construct(
-        public string $title = 'ApexCode | Automate and Grow Your Business.',
-        public string $description = 'A one-man web agency that designs, develops, and maintains business web applications using laravel.'
+        public string $title = 'Playground | ApexCode',
+        public string $description = 'A place for experiments and learning. A playground to showcase this I have on the main blog.'
     ){}
 
     public function render(): Application|View
