@@ -14,7 +14,8 @@
     "laravel/tinker": "^2.8",
     "laravolt/avatar": "^5.0",
     "livewire/livewire": "^3.0@beta",
-    "livewire/volt": "^1.6"
+    "livewire/volt": "^1.6",
+    "spatie/laravel-webhook-client": "^3.4"
   },
   "require-dev": {
     "laravel/pint": "^1.0",
