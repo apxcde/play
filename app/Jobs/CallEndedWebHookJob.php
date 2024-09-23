@@ -9,7 +9,7 @@ class CallEndedWebHookJob extends SpatieProcessWebhookJob
     public function handle(): void
     {
         // Handle the incoming webhook
-        ray('Call Ended Webhook Job');
-        ray($this->webhookCall);
+        ray('call ended webhook job')->red();
+        ray($this->webhookCall)->red();
     }
 }

@@ -9,7 +9,7 @@ class RecordingCompletedWebHookJob extends SpatieProcessWebhookJob
     public function handle(): void
     {
         // Handle the incoming webhook
-        ray('Call Recording Webhook Job');
-        ray($this->webhookCall);
+        ray('call recording webhook job')->purple();
+        ray($this->webhookCall)->purple();
     }
 }
