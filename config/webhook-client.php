@@ -1,5 +1,7 @@
 <?php
 
+use App\Support\Webhooks\FailedRespondsTo;
+
 return [
     'configs' => [
         [
@@ -12,6 +14,17 @@ return [
             'webhook_model' => \Spatie\WebhookClient\Models\WebhookCall::class,
             'store_headers' => '*',
             'process_webhook_job' => \App\Jobs\IncomingCallWebHookJob::class,
+        ],
+        [
+            'name' => 'failed',
+            'signing_secret' => env('WEBHOOK_CLIENT_SECRET'),
+            'signature_header_name' => 'Signature',
+            'signature_validator' => \App\Support\CallSignatureValidator::class,
+            'webhook_profile' => \Spatie\WebhookClient\WebhookProfile\ProcessEverythingWebhookProfile::class,
+            'webhook_response' => FailedRespondsTo::class,
+            'webhook_model' => \Spatie\WebhookClient\Models\WebhookCall::class,
+            'store_headers' => '*',
+            'process_webhook_job' => \App\Jobs\FailedCallWebHookJob::class,
         ],
         [
             'name' => 'call_ended',

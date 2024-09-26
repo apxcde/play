@@ -8,8 +8,6 @@ class IncomingCallWebHookJob extends SpatieProcessWebhookJob
 {
     public function handle(): void
     {
-        // Handle the incoming webhook
-        ray('incoming call webhook job')->blue();
-        ray($this->webhookCall)->blue();
+        ray('incoming call received')->green();
     }
 }
